@@ -13,7 +13,7 @@ user_list = get_existing_users()
 if not user_list:
     user_list = ["Select user", "User1", "User2", "User3"]  # fallback example
 
-username = st.selectbox("Select your username:", user_list, index=0)
+username = st.selectbox("Select your username:", user_list, index=None)
 # --- Load match data ---
 data = load_data()
 if not data:
@@ -34,6 +34,7 @@ div[data-testid="stColumns"] {display:flex;flex-wrap:wrap;justify-content:center
 div[data-testid="stColumn"] {flex-grow:1;flex-shrink:1;flex-basis:0;min-width:60px;max-width:200px;display:flex;justify-content:center;align-items:center;padding:0 5px;}
 .stButton>button {width:100%;padding:10px 20px;font-size:16px;border-radius:6px;cursor:pointer;margin:0;white-space:nowrap;}
 @media (max-width: 640px){div[data-testid="stColumn"]{min-width:50px;max-width:80px;}}
+.st-emotion-cache-1permvm{ justify-content:center}
 </style>
 """, unsafe_allow_html=True)
 
