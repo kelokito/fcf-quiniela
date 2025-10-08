@@ -28,12 +28,45 @@ predictions = {}
 # --- Custom CSS ---
 st.markdown("""
 <style>
-.match-card {border:1px solid #ddd;border-radius:10px;padding:12px;margin-bottom:18px;box-shadow:0 2px 6px rgba(0,0,0,0.08);background-color:white;}
-.teams-line {display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:16px;text-align:center;margin-bottom:8px;}
-div[data-testid="stColumns"] {display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:8px;}
-div[data-testid="stColumn"] {flex-grow:1;flex-shrink:1;flex-basis:0;min-width:60px;max-width:200px;display:flex;justify-content:center;align-items:center;padding:0 5px;}
-.stButton>button {width:100%;padding:10px 20px;font-size:16px;border-radius:6px;cursor:pointer;margin:0;white-space:nowrap;}
-@media (max-width: 640px){div[data-testid="stColumn"]{min-width:50px;max-width:80px;}}
+.match-card {
+    border:1px solid #ddd;border-radius:10px;padding:12px;margin-bottom:18px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);background-color:white;
+}
+.teams-line {
+    display:flex;justify-content:space-between;align-items:center;
+    font-weight:600;font-size:16px;text-align:center;margin-bottom:8px;
+}
+div[data-testid="stColumns"] {
+    display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:8px;
+}
+div[data-testid="stColumn"] {
+    flex-grow:1;flex-shrink:1;flex-basis:0;min-width:60px;max-width:200px;
+    display:flex;justify-content:center;align-items:center;padding:0 5px;
+}
+.stButton>button {
+    width:100%;padding:10px 20px;font-size:16px;border-radius:6px;
+    cursor:pointer;margin:0;white-space:nowrap;transition:all 0.2s ease;
+}
+
+/* --- Selected styles --- */
+.selected-light {
+    background-color: #333 !important;
+    color: #fff !important;
+    opacity: 1 !important;  /* fully visible */
+    border: 1px solid #fff !important;
+}
+
+.selected-dark {
+    background-color: #eee !important;
+    color: #000 !important;
+    opacity: 1 !important;
+    border: 1px solid #000 !important;
+}
+
+/* Responsive mobile */
+@media (max-width:640px){
+    div[data-testid="stColumn"]{min-width:50px;max-width:80px;}
+}
 .st-emotion-cache-1permvm{ justify-content:center}
 </style>
 """, unsafe_allow_html=True)
