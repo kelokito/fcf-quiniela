@@ -4,6 +4,7 @@ import json
 
 URL = "https://www.fcf.cat/calendari/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11"
 
+
 def scrape_calendar(url):
     response = requests.get(url)
     response.raise_for_status()

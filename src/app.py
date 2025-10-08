@@ -1,16 +1,19 @@
 import streamlit as st
-from logic import get_all_predictions, get_prediction_distribution, get_number_of_users, get_next_jornada, save_predictions_db, load_data
+from logic import get_all_predictions, get_prediction_distribution, get_number_of_users, get_next_jornada, save_predictions_db, load_data, get_existing_users
 import pandas as pd
 
 st.set_page_config(page_title="Futsal Predictor", layout="centered")
 
 # --- Title and description ---
-st.title("⚽ Futsal Predictor")
+st.title("⚽ Futsal Predictor - Senior B")
 st.caption("Predict the next Jornada (1X2)")
 
 # --- Get username ---
-username = st.text_input("Enter your username:")
+user_list = get_existing_users()
+if not user_list:
+    user_list = ["Select user", "User1", "User2", "User3"]  # fallback example
 
+username = st.selectbox("Select your username:", user_list, index=0)
 # --- Load match data ---
 data = load_data()
 if not data:

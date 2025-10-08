@@ -33,15 +33,25 @@ def init_db():
 
 
 def save_predictions_db(username, jornada, predictions):
-    """Save user predictions into the database."""
+    """Save user predictions into the database, replacing old ones if they exist."""
     con = init_db()
     timestamp = datetime.now()
+
+    # ✅ Delete existing predictions for this user and jornada
+    con.execute(
+        "DELETE FROM predictions WHERE username = ? AND jornada = ?",
+        [username, jornada]
+    )
+
+    # ✅ Insert new predictions
     for match, pred in predictions.items():
         con.execute(
             "INSERT INTO predictions VALUES (?, ?, ?, ?, ?)",
             [username, jornada, timestamp, match, pred]
         )
+
     con.close()
+
 
 
 def get_next_jornada(data):
@@ -86,3 +96,27 @@ def get_number_of_users():
     """Return number of unique users who made predictions."""
     df = get_all_predictions()
     return df['username'].nunique()
+
+
+def get_existing_users():
+    """Return a list of unique usernames from the predictions DB."""
+    users = [
+        "Adri",
+        "Aaron",
+        "Alvaro",
+        "Jorge",
+        "Quinco",
+        "Callau",
+        "Torrema",
+        "Rovira",
+        "Gorka",
+        "Joan",
+        "Guille",
+        "Sergio",
+        "Gimeno",
+        "Chete",
+        "Javi",
+        "Luca"
+    ]
+
+    return users
