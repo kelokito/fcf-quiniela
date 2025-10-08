@@ -1,0 +1,1796 @@
+[
+    {
+        "jornada": "Jornada 1",
+        "date": "04-10-2025",
+        "matches": [
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": "0",
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": "8",
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/icars-atletic-a/as3/atletic-les-corts-futsal-c"
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": "2",
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": "3",
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/aelis-sage-partner-eixample-c/as3/infant-jesus-club-esportiu-a"
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/ipse-el-pilar-ce-b/as3/nou-de-la-rambla-cfs-a"
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": "0",
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": "4",
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/futsal-polaris-fort-pienc-c/as3/aee-institut-icaria-cet10-b"
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/futsal-rosario-central-d/as3/poble-sec-unio-esportiva-a"
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": "1",
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": "4",
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/padre-damian-sscc-b/as3/jesuites-gracia-collegi-kostka-ce-a"
+            },
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": "2",
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": "1",
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/jesuites-el-clot-club-esportiu-b/as3/poblenou-futbol-club-a"
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 2",
+        "date": "11-10-2025",
+        "matches": [
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 3",
+        "date": "18-10-2025",
+        "matches": [
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 4",
+        "date": "25-10-2025",
+        "matches": [
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 5",
+        "date": "08-11-2025",
+        "matches": [
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 6",
+        "date": "15-11-2025",
+        "matches": [
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 7",
+        "date": "22-11-2025",
+        "matches": [
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 8",
+        "date": "29-11-2025",
+        "matches": [
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 9",
+        "date": "13-12-2025",
+        "matches": [
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 10",
+        "date": "20-12-2025",
+        "matches": [
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 11",
+        "date": "10-01-2026",
+        "matches": [
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 12",
+        "date": "17-01-2026",
+        "matches": [
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 13",
+        "date": "24-01-2026",
+        "matches": [
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 14",
+        "date": "07-02-2026",
+        "matches": [
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 15",
+        "date": "21-02-2026",
+        "matches": [
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 16",
+        "date": "28-02-2026",
+        "matches": [
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 17",
+        "date": "07-03-2026",
+        "matches": [
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 18",
+        "date": "14-03-2026",
+        "matches": [
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 19",
+        "date": "21-03-2026",
+        "matches": [
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 20",
+        "date": "28-03-2026",
+        "matches": [
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 21",
+        "date": "11-04-2026",
+        "matches": [
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 22",
+        "date": "18-04-2026",
+        "matches": [
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 23",
+        "date": "25-04-2026",
+        "matches": [
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 24",
+        "date": "02-05-2026",
+        "matches": [
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 25",
+        "date": "09-05-2026",
+        "matches": [
+            {
+                "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "home_score": null,
+                "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "home_score": null,
+                "away_team": "POBLENOU FUTBOL CLUB A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "home_score": null,
+                "away_team": "PADRE DAMIAN SSCC B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "NOU DE LA RAMBLA CFS A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "home_score": null,
+                "away_team": "FUTSAL ROSARIO CENTRAL D",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "FUTSAL POLARIS FORT PIENC C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "home_score": null,
+                "away_team": "IPSE EL PILAR CE B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "ICARS ATLETIC  A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "home_score": null,
+                "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    },
+    {
+        "jornada": "Jornada 26",
+        "date": "16-05-2026",
+        "matches": [
+            {
+                "home_team": "POBLENOU FUTBOL CLUB A",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
+                "home_score": null,
+                "away_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "PADRE DAMIAN SSCC B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
+                "home_score": null,
+                "away_team": "POBLE SEC UNIÓ ESPORTIVA A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000012658_33486_157712034259218_157710080926080_335881_3882379_n.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL ROSARIO CENTRAL D",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
+                "home_score": null,
+                "away_team": "AEE INSTITUT ICÀRIA CET10 B",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "FUTSAL POLARIS FORT PIENC C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
+                "home_score": null,
+                "away_team": "NOU DE LA RAMBLA CFS A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "IPSE EL PILAR CE B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
+                "home_score": null,
+                "away_team": "INFANT JESÚS CLUB ESPORTIU A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "AELIS-SAGE PARTNER EIXAMPLE C",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
+                "home_score": null,
+                "away_team": "ATLÈTIC LES CORTS FUTSAL   C",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
+                "away_score": null,
+                "match_report": null
+            },
+            {
+                "home_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
+                "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
+                "home_score": null,
+                "away_team": "ICARS ATLETIC  A",
+                "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
+                "away_score": null,
+                "match_report": null
+            }
+        ]
+    }
+]
