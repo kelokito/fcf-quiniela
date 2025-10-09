@@ -1,5 +1,5 @@
 import streamlit as st
-from logic import get_all_predictions, get_prediction_distribution, get_number_of_users, get_next_jornada, save_predictions_db, load_data, get_existing_users, get_match_predictions
+from logic import get_prediction_distribution, get_number_of_users, get_matchday, save_predictions_db, get_matches, get_existing_users, get_match_predictions
 import pandas as pd
 
 st.set_page_config(page_title="Futsal Predictor", layout="centered")
@@ -14,14 +14,11 @@ if not user_list:
     user_list = ["Select user", "User1", "User2", "User3"]  # fallback example
 
 username = st.selectbox("Select your username:", user_list, index=None)
-# --- Load match data ---
-data = load_data()
-if not data:
-    st.warning("No data loaded. Please check your data source.")
-    st.stop()
 
-next_jornada = get_next_jornada(data)
-st.subheader(f"{next_jornada['jornada']} — {next_jornada['date']}")
+# --- Load match data ---
+matchday = get_matchday()
+print(matchday)
+st.subheader(f"Jornada {matchday['number']} - {matchday['date']}")
 
 predictions = {}
 
@@ -73,40 +70,57 @@ div[data-testid="stColumn"] {
 
 # --- Display matches ---
 predictions = {}
+matches = get_matches(matchday['number'])
 
-for match in next_jornada["matches"]:
-    match_id = match.get("id", f"{match['home_team']}-{match['away_team']}")
-    match_name = f"{match['home_team']} vs {match['away_team']}"
+# Assuming matches = get_matches(current_matchday)
+# and next_jornada is available if needed
 
+predictions = {}
+
+for i, match in enumerate(matches):
+    home_team = match["home_team"]
+    away_team = match["away_team"]
+    home_logo = match.get("home_logo")
+    away_logo = match.get("away_logo")
+    result = match.get("result")
+
+    match_id = f"{home_team}-{away_team}"
+    match_name = f"{home_team} vs {away_team}"
+
+    # --- Display match info ---
     st.markdown(f"""
-        <div class='teams-line'>
-            <div><img src="{match['home_logo']}" width="30"> {match['home_team']}</div>
+        <div class='teams-line' style='display:flex;justify-content:space-between;align-items:center;margin:8px 0;'>
+            <div style='display:flex;align-items:center;gap:6px;'>
+                <img src="{home_logo}" width="30"> <b>{home_team}</b>
+            </div>
             <div>vs</div>
-            <div>{match['away_team']} <img src="{match['away_logo']}" width="30"></div>
+            <div style='display:flex;align-items:center;gap:6px;'>
+                <b>{away_team}</b> <img src="{away_logo}" width="30">
+            </div>
         </div>
     """, unsafe_allow_html=True)
 
     # --- Prediction selection ---
     col1, col2, col3 = st.columns(3)
     prediction_key = f"pred_{match_id}"
+    disabled = result is not None  # disable buttons if match already played
 
     with col1:
-        if st.button("1", key=f"{match_id}-1"):
+        if st.button("1", key=f"{match_id}-1", disabled=disabled):
             st.session_state[prediction_key] = "1"
     with col2:
-        if st.button("X", key=f"{match_id}-X"):
+        if st.button("X", key=f"{match_id}-X", disabled=disabled):
             st.session_state[prediction_key] = "X"
     with col3:
-        if st.button("2", key=f"{match_id}-2"):
+        if st.button("2", key=f"{match_id}-2", disabled=disabled):
             st.session_state[prediction_key] = "2"
 
     selected = st.session_state.get(prediction_key, None)
 
     # --- Stats display ---
-    dist = get_prediction_distribution(match["home_team"], match["away_team"])
-    users = get_match_predictions(match["home_team"], match["away_team"])
+    dist = get_prediction_distribution(home_team, away_team)
+    users = get_match_predictions(home_team, away_team)
 
-    # --- Display distribution percentages and users under each button ---
     st.markdown("<div style='margin-top:-10px;'></div>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
 
@@ -138,16 +152,17 @@ for match in next_jornada["matches"]:
 
     predictions[match_id] = {
         "match": match_name,
-        "home_team": match["home_team"],
-        "away_team": match["away_team"],
+        "home_team": home_team,
+        "away_team": away_team,
         "prediction": selected or "",
     }
 
-    if match != next_jornada["matches"][-1]:
+    # Divider between matches (except last one)
+    if i < len(matches) - 1:
         st.divider()
 
-
 st.markdown("---")
+
 
 # --- Save predictions ---
 all_predicted = all(
@@ -163,26 +178,15 @@ if st.button("💾 Save Predictions"):
     else:
         print("Llego")
         valid_preds = {m: p for m, p in predictions.items() if p}
-        save_predictions_db(username, next_jornada["jornada"], valid_preds)
+        save_predictions_db(username, matchday['number'], valid_preds)
         st.success("✅ Predictions saved successfully!")
 
 # --- Statistics ---
 st.subheader("📊 Statistics")
 
-df = get_all_predictions()
+# --- Number of users who answered ---
+num_users = get_number_of_users(matchday['number'])
+st.metric("Number of users who have answered", num_users)
 
-if df.empty:
-    st.info("No predictions yet.")
-else:
-    # --- Number of users who answered ---
-    num_users = get_number_of_users()
-    st.metric("Number of users who have answered", num_users)
-
-    # --- Current classification ---
-    st.subheader("Current Classification")
-    # Example placeholder: replace with your real classification logic if available
-    if 'classification' in df.columns and 'team' in df.columns:
-        classification = df[['team','classification']].drop_duplicates().sort_values('classification', ascending=False)
-        st.table(classification)
-    else:
-        st.info("Classification data not available yet.")
+# --- Current classification ---
+#st.subheader("Current Classification")

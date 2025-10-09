@@ -17,23 +17,13 @@ docker run --env-file .env -p 8501:8501 -v "$(pwd):/app" fcf-app
 
 ```bash
 # Run the scraper inside the container to fetch new match data
-docker run -it --rm -v "$(pwd)/data:/app/data" fcf-app python /app/src/scraper.py
+docker run --env-file .env -it --rm -v "$(pwd)/data:/app/data" fcf-app python /app/src/main.py
 ```
 
 > `--rm` ensures the container is removed after running. `-it` allows interactive output from the scraper.
 
 ---
 
-## ❌ Drop All Predictions / Reset DB
-
-```bash
-# Run the script to drop all predictions
-docker run -it --rm -v "$(pwd)/data:/app/data" -w /app/src fcf-app python -m drop_db
-```
-
-> This will remove all stored predictions from the database.
-
----
 
 ## 🌐 Access the App
 

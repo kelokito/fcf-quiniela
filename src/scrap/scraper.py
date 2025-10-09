@@ -1,7 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from config import DATA_FILE
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+DATA_DIR = BASE_DIR / "data" / "futbolcalendar"
+DATA_FILE = DATA_DIR / "futsal_calendar.json"
 
 URL = "https://www.fcf.cat/calendari/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11"
 
@@ -52,9 +56,13 @@ def scrape_calendar(url):
 
     return data
 
-if __name__ == "__main__":
+def scrap_results():
     print("Scraping FCF futsal calendar...")
     results = scrape_calendar(URL)
-    with open("futsal_calendar.json", "w", encoding="utf-8") as f:
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=4, ensure_ascii=False)
-    print("✅ Data saved to futsal_calendar.json")
+    print(f"✅ Data saved to {DATA_FILE}")
+
+
+if __name__ == "__main__":
+    scrap_results()

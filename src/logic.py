@@ -49,15 +49,14 @@ def init_db():
         st.stop()
 
 
-def save_predictions_db(username, jornada, predictions):
+def save_predictions_db(username, matchday_number, predictions):
     """Save user predictions into Supabase, replacing old ones if they exist."""
     print("Saving predictions")
     print(username)
-    print(jornada)
+    print(matchday_number)
     print(predictions)
     timestamp = datetime.utcnow().isoformat()
-
-    matchday_number = "".join([c for c in jornada if c.isdigit()])
+ 
 
     # 1️⃣ Delete old predictions for this user + jornada
     supabase.table("predictions").delete().match({
@@ -93,55 +92,141 @@ def get_all_predictions():
 
 
 def get_prediction_distribution(home_team, away_team):
-    """Return % distribution of '1', 'X', '2' for a given match."""
-    df = get_all_predictions()
-    match_df = df[(df["home_team"] == home_team) & (df["away_team"] == away_team)]
-    if match_df.empty:
+    """Return % distribution of '1', 'X', '2' for a given match, directly from Supabase."""
+    try:
+        # ✅ Fetch only relevant rows
+        res = (
+            supabase.table("predictions")
+            .select("prediction")
+            .eq("home_team", home_team)
+            .eq("away_team", away_team)
+            .execute()
+        )
+
+        data = res.data or []
+        if not data:
+            return pd.Series({"1": 0, "X": 0, "2": 0})
+
+        # ✅ Build DataFrame for aggregation
+        df = pd.DataFrame(data)
+        dist = df["prediction"].value_counts(normalize=True)
+        return dist.reindex(["1", "X", "2"], fill_value=0)
+
+    except Exception as e:
+        print(f"⚠️ Error in get_prediction_distribution: {e}")
         return pd.Series({"1": 0, "X": 0, "2": 0})
-    dist = match_df["prediction"].value_counts(normalize=True)
-    return dist.reindex(["1", "X", "2"], fill_value=0)
+
 
 
 def get_match_predictions(home_team, away_team):
-    """Return a dict showing which users picked each prediction (1, X, 2)."""
-    df = get_all_predictions()
+    """Return a dict showing which users picked each prediction (1, X, 2) directly from Supabase."""
+    try:
+        # ✅ Fetch only the relevant columns for this match
+        res = (
+            supabase.table("predictions")
+            .select("username, prediction")
+            .eq("home_team", home_team)
+            .eq("away_team", away_team)
+            .execute()
+        )
 
-    # ✅ Correct parenthesis for multiple conditions in Pandas
-    match_df = df[(df["home_team"] == home_team) & (df["away_team"] == away_team)]
+        data = res.data or []
+        if not data:
+            return {"1": [], "X": [], "2": []}
 
-    if match_df.empty:
+        # ✅ Build DataFrame for grouping
+        df = pd.DataFrame(data)
+
+        # ✅ Group usernames by prediction
+        grouped = df.groupby("prediction")["username"].apply(list).to_dict()
+
+        # ✅ Ensure all possible options are included
+        return {opt: grouped.get(opt, []) for opt in ["1", "X", "2"]}
+
+    except Exception as e:
+        print(f"⚠️ Error in get_match_predictions: {e}")
         return {"1": [], "X": [], "2": []}
 
-    # ✅ Group users by prediction value
-    grouped = match_df.groupby("prediction")["username"].apply(list).to_dict()
-
-    # ✅ Ensure all possible outcomes exist
-    return {opt: grouped.get(opt, []) for opt in ["1", "X", "2"]}
 
 
+def get_number_of_users(matchday_number):
+    """Return number of unique users who made predictions for a given jornada."""
+    print(matchday_number)
+    try:
+        res = (
+            supabase.table("predictions")
+            .select("username")
+            .eq("jornada", matchday_number)
+            .execute()
+        )
 
-def get_number_of_users():
-    """Return number of unique users who made predictions."""
-    df = get_all_predictions()
-    return df["username"].nunique()
+        data = res.data or []
+        if not data:
+            return 0
+
+        df = pd.DataFrame(data)
+        return df["username"].nunique()
+
+    except Exception as e:
+        print(f"⚠️ Error in get_number_of_users: {e}")
+        return 0
 
 
-def get_next_jornada(data):
-    """Find the next jornada after today."""
-    today = datetime.today()
-    upcoming = []
-    for jornada in data:
-        try:
-            date = datetime.strptime(jornada["date"], "%d-%m-%Y")
-            if date >= today:
-                upcoming.append((date, jornada))
-        except Exception:
-            continue
+def get_matchday():
+    """Find the next jornada (matchday) after today, using Supabase filter."""
+    today = datetime.today().strftime("%Y-%m-%d")
+    try:
+        # Query directly in Supabase
+        res = (
+            supabase.table("matchdays")
+            .select("number, date")
+            .gt("date", today)             # <-- Compare date column > today
+            .order("date", desc=False)  # <-- Sort soonest first
+            .limit(1)                       # <-- Get only the next jornada
+            .execute()
+        )
 
-    if not upcoming:
-        return data[-1]
-    upcoming.sort(key=lambda x: x[0])
-    return upcoming[0][1]
+        data = res.data or []
+        if not data:
+            print("⚠️ No upcoming jornadas.")
+            return None
+
+        next_jornada = data[0]
+        print(f"✅ Next jornada: {next_jornada}")
+        return next_jornada
+
+    except Exception as e:
+        print(f"⚠️ Error in get_next_jornada: {e}")
+        return None
+
+def get_matches(matchday: str):
+    """
+    Return all matches for a given matchday where result is NULL.
+    Includes home_team, away_team, and their logos via join with 'teams' table.
+    """
+    print(matchday)
+    try:
+        home_teams = {t["name"]: t["logo"] for t in supabase.table("teams").select("name,logo").execute().data}
+        away_teams = home_teams  # same table
+
+        matches = supabase.table("results").select("*").eq("matchday", matchday).is_("result", None).execute().data
+
+        formatted = []
+        for m in matches:
+            formatted.append({
+                "home_team": m["home_team"],
+                "home_logo": home_teams.get(m["home_team"]),
+                "away_team": m["away_team"],
+                "away_logo": away_teams.get(m["away_team"]),
+                "result": m["result"],
+            })
+
+
+        return formatted
+
+    except Exception as e:
+        print(f"⚠️ Error in get_matches: {e}")
+        return []
 
 
 def get_existing_users():

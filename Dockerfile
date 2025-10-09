@@ -10,7 +10,7 @@ COPY src /app/src
 COPY data /app/data
 
 # Optional: run scraper at build
-RUN python /app/src/scraper.py
+#RUN python /app/src/main.py
 
 EXPOSE 8501
 
