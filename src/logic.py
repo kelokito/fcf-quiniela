@@ -237,3 +237,114 @@ def get_existing_users():
         "Gimeno", "Chete", "Javi", "Luca"
     ])
     return users
+
+
+def get_top_users():
+    """
+    Get users with the most correct predictions.
+    Returns a list of dicts: [{"username": ..., "hits": ...}]
+    """
+    try:
+        # Fetch all predictions joined with results
+        predictions = supabase.table("predictions").select(
+            "username, matchday, home_team, away_team, prediction"
+        ).execute().data
+
+        results = supabase.table("results").select(
+            "matchday, home_team, away_team, result"
+        ).execute().data
+
+        # Convert to dict for fast lookup
+        result_map = {(r["matchday"], r["home_team"], r["away_team"]): r["result"] for r in results if r["result"]}
+
+        # Count correct predictions
+        hits = {}
+        for p in predictions:
+            key = (p["matchday"], p["home_team"], p["away_team"])
+            if key in result_map and p["prediction"] == result_map[key]:
+                hits[p["username"]] = hits.get(p["username"], 0) + 1
+
+        # Sort by hits descending
+        top_users = sorted([{"username": u, "hits": c} for u, c in hits.items()],
+                           key=lambda x: x["hits"], reverse=True)
+        return top_users
+
+    except Exception as e:
+        print(f"⚠️ Error in get_top_users: {e}")
+        return []
+
+
+def get_classification():
+    """
+    Return the current classification table.
+    """
+    try:
+        classification = supabase.table("classification").select("*").order("position").execute().data
+        return classification
+    except Exception as e:
+        print(f"⚠️ Error in get_classification: {e}")
+        return []
+
+
+def get_users_hits_last_matchday():
+    """
+    Return users and their hit ratio for the latest matchday.
+    """
+    try:
+        # --- Get the last matchday ---
+        last_jornada_res = (
+            supabase.table("matchdays")
+            .select("number")
+            .order("date", ascending=False)
+            .limit(1)
+            .execute()
+        )
+        last_jornada_data = last_jornada_res.data or []
+        if not last_jornada_data:
+            return []
+
+        last_matchday = last_jornada_data[0]["number"]
+
+        # --- Get predictions for the last matchday ---
+        predictions = supabase.table("predictions").select(
+            "username, matchday, home_team, away_team, prediction"
+        ).eq("matchday", last_matchday).execute().data
+
+        # --- Get results for the last matchday ---
+        results = supabase.table("results").select(
+            "matchday, home_team, away_team, result"
+        ).eq("matchday", last_matchday).execute().data
+
+        result_map = {
+            (r["home_team"], r["away_team"]): r["result"] 
+            for r in results if r["result"]
+        }
+
+        ratio = {}
+        total_preds = {}
+        for p in predictions:
+            user = p["username"]
+            key = (p["home_team"], p["away_team"])
+            total_preds[user] = total_preds.get(user, 0) + 1
+            if key in result_map and p["prediction"] == result_map[key]:
+                ratio[user] = ratio.get(user, 0) + 1
+
+        # Compute hit ratios
+        hit_ratios = [
+            {"username": u, "hit_ratio": round(ratio.get(u, 0)/total_preds[u], 2)}
+            for u in total_preds
+        ]
+        return sorted(hit_ratios, key=lambda x: x["hit_ratio"], reverse=True)
+
+    except Exception as e:
+        print(f"⚠️ Error in get_users_hit_ratio_last_matchday: {e}")
+        return []
+
+
+
+def get_jackpot():
+    """
+    Return the current bote (jackpot), currently mocked as 0.
+    """
+    return 0
+
