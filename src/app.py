@@ -1,5 +1,5 @@
 import streamlit as st
-from logic import get_all_predictions, get_prediction_distribution, get_number_of_users, get_next_jornada, save_predictions_db, load_data, get_existing_users
+from logic import get_all_predictions, get_prediction_distribution, get_number_of_users, get_next_jornada, save_predictions_db, load_data, get_existing_users, get_match_predictions
 import pandas as pd
 
 st.set_page_config(page_title="Futsal Predictor", layout="centered")
@@ -72,6 +72,8 @@ div[data-testid="stColumn"] {
 """, unsafe_allow_html=True)
 
 # --- Display matches ---
+predictions = {}
+
 for match in next_jornada["matches"]:
     match_id = match.get("id", f"{match['home_team']}-{match['away_team']}")
     match_name = f"{match['home_team']} vs {match['away_team']}"
@@ -84,6 +86,7 @@ for match in next_jornada["matches"]:
         </div>
     """, unsafe_allow_html=True)
 
+    # --- Prediction selection ---
     col1, col2, col3 = st.columns(3)
     prediction_key = f"pred_{match_id}"
 
@@ -98,27 +101,67 @@ for match in next_jornada["matches"]:
             st.session_state[prediction_key] = "2"
 
     selected = st.session_state.get(prediction_key, None)
-    if selected:
-        st.markdown(f"<div style='text-align:center;font-size:14px;color:gray;'>Selected: <b>{selected}</b></div>", unsafe_allow_html=True)
 
-    st.markdown("</div>", unsafe_allow_html=True)
-    predictions[match_name] = selected or ""
+    # --- Stats display ---
+    dist = get_prediction_distribution(match["home_team"], match["away_team"])
+    users = get_match_predictions(match["home_team"], match["away_team"])
+
+    # --- Display distribution percentages and users under each button ---
+    st.markdown("<div style='margin-top:-10px;'></div>", unsafe_allow_html=True)
+    col1, col2, col3 = st.columns(3)
+
+    for col, opt in zip([col1, col2, col3], ["1", "X", "2"]):
+        with col:
+            pct = round(dist.get(opt, 0) * 100, 1)
+            names = ", ".join(users.get(opt, []))
+            st.markdown(
+                f"""
+                <div style="
+                    text-align:center;
+                    font-size:14px;
+                    margin-top:4px;
+                    background-color:rgba(0,0,0,0.03);
+                    border-radius:6px;
+                    padding:6px;">
+                    <b>{pct}%</b><br>
+                    <span style='font-size:12px;color:gray;'>{names or '-'}</span>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+    if selected:
+        st.markdown(
+            f"<div style='text-align:center;font-size:14px;color:gray;'>Selected: <b>{selected}</b></div>",
+            unsafe_allow_html=True
+        )
+
+    predictions[match_id] = {
+        "match": match_name,
+        "home_team": match["home_team"],
+        "away_team": match["away_team"],
+        "prediction": selected or "",
+    }
 
     if match != next_jornada["matches"][-1]:
         st.divider()
 
+
 st.markdown("---")
 
 # --- Save predictions ---
-all_predicted = all(predictions.get(f"{match['home_team']} vs {match['away_team']}") 
-                    for match in next_jornada["matches"])
+all_predicted = all(
+    (p.get("prediction") if isinstance(p, dict) else p)
+    for p in predictions.values()
+)
 
 if st.button("💾 Save Predictions"):
-    if not username.strip():
+    if not username or not str(username).strip():
         st.warning("Please enter your username before saving.")
     elif not all_predicted:
         st.warning("⚠️ Please fill in predictions for ALL matches before saving.")
     else:
+        print("Llego")
         valid_preds = {m: p for m, p in predictions.items() if p}
         save_predictions_db(username, next_jornada["jornada"], valid_preds)
         st.success("✅ Predictions saved successfully!")
@@ -138,8 +181,7 @@ else:
     # --- Prediction distribution per match ---
     st.subheader("Prediction Distribution per Match")
     for match in next_jornada["matches"]:
-        match_name = f"{match['home_team']} vs {match['away_team']}"
-        dist = get_prediction_distribution(match_name)  # Returns a dict like {'1': 0.4, 'X': 0.35, '2': 0.25}
+        dist = get_prediction_distribution(match['home_team'], match['away_team'])  # Returns a dict like {'1': 0.4, 'X': 0.35, '2': 0.25}
         
         # Ensure order 1, X, 2
         dist_ordered = {k: dist.get(k, 0) for k in ["1", "X", "2"]}

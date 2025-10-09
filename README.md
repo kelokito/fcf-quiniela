@@ -6,7 +6,7 @@
 docker build -t fcf-app .
 
 # Run the container (with local volume to persist data)
-docker run -p 8501:8501 -v "$(pwd):/app" fcf-app
+docker run --env-file .env -p 8501:8501 -v "$(pwd):/app" fcf-app
 ```
 
 > This will start the Streamlit app and map port 8501 to your host machine. Data changes will persist because of the mounted volume.

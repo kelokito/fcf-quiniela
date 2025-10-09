@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+from config import DATA_FILE
 
 URL = "https://www.fcf.cat/calendari/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11"
 
