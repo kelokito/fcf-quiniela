@@ -9,9 +9,19 @@ from config import BASE_DIR, DATA_DIR, DATA_FILE
 from dotenv import load_dotenv
 load_dotenv()
 
+def get_secret(key: str):
+    """Try Streamlit secrets first, fallback to .env"""
+    try:
+        if key in st.secrets:
+            return st.secrets[key]
+    except Exception:
+        # Happens locally when no secrets.toml exists
+        pass
+    return os.getenv(key)
+
 # --- Supabase setup ---
-SUPABASE_URL = st.secrets.get("SUPABASE_URL") or os.getenv("SUPABASE_URL")
-SUPABASE_KEY = st.secrets.get("SUPABASE_KEY") or os.getenv("SUPABASE_KEY")
+SUPABASE_URL = get_secret("SUPABASE_URL")
+SUPABASE_KEY = get_secret("SUPABASE_KEY")
 
 if not SUPABASE_URL or not SUPABASE_KEY:
     st.error("❌ Missing Supabase credentials. Please set SUPABASE_URL and SUPABASE_KEY.")

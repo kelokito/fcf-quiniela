@@ -178,26 +178,6 @@ else:
     num_users = get_number_of_users()
     st.metric("Number of users who have answered", num_users)
 
-    # --- Prediction distribution per match ---
-    st.subheader("Prediction Distribution per Match")
-    for match in next_jornada["matches"]:
-        dist = get_prediction_distribution(match['home_team'], match['away_team'])  # Returns a dict like {'1': 0.4, 'X': 0.35, '2': 0.25}
-        
-        # Ensure order 1, X, 2
-        dist_ordered = {k: dist.get(k, 0) for k in ["1", "X", "2"]}
-        
-        st.markdown(f"**{match_name}**")
-        
-        # Display percentages horizontally
-        cols = st.columns(3)
-        for i, opt in enumerate(["1", "X", "2"]):
-            with cols[i]:
-                st.markdown(f"<div style='text-align:center'>{opt}: {dist_ordered[opt]*100:.1f}%</div>", unsafe_allow_html=True)
-        
-        st.markdown("---")
-
-
-
     # --- Current classification ---
     st.subheader("Current Classification")
     # Example placeholder: replace with your real classification logic if available
