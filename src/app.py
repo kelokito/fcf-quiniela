@@ -176,8 +176,11 @@ if df.empty:
 else:
     # --- Number of users who answered ---
     num_users = get_number_of_users()
-    st.metric("Number of users who have answered", num_users)
-
+    total_users = len(get_existing_users())
+    st.metric(
+        label="Number of users who have answered",
+        value=f"{num_users} / {total_users}"
+    )
     # --- Current classification ---
     st.subheader("Current Classification")
     # Example placeholder: replace with your real classification logic if available
