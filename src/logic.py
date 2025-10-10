@@ -192,7 +192,6 @@ def get_matchday():
             return None
 
         next_jornada = data[0]
-        print(f"✅ Next jornada: {next_jornada}")
         return next_jornada
 
     except Exception as e:
@@ -275,38 +274,44 @@ def get_classification():
         return []
     
 
-# --- Corrected get_top_users function ---
 def get_top_users():
     """
     Get users with the most correct predictions.
     Returns a list of dicts: [{"username": ..., "hits": ...}]
     """
     try:
-        # Fetch all predictions joined with results
-        # IMPORTANT: Replace "matchday" with the actual column name in your predictions table
-        # Based on error, it's NOT 'matchday'. Let's assume 'jornada_number' as an example.
-        # You need to replace 'jornada_number' with the correct column name from your 'predictions' table.
+        # Fetch all predictions (using 'jornada')
         predictions = supabase.table("predictions").select(
-            "username, jornada_number, home_team, away_team, prediction" # <-- FIX: Replaced 'matchday'
+            "username, jornada, home_team, away_team, prediction"
         ).execute().data
 
+        # Fetch all results (using 'matchday')
         results = supabase.table("results").select(
-            "jornada_number, home_team, away_team, result" # <-- FIX: Replaced 'matchday'
+            "matchday, home_team, away_team, result"
         ).execute().data
 
-        # Convert to dict for fast lookup
-        result_map = {(r["jornada_number"], r["home_team"], r["away_team"]): r["result"] for r in results if r["result"]}
+        # Map results by their unique identifiers
+        result_map = {
+            (r["matchday"], r["home_team"], r["away_team"]): r["result"]
+            for r in results if r.get("result")
+        }
 
         # Count correct predictions
         hits = {}
         for p in predictions:
-            key = (p["jornada_number"], p["home_team"], p["away_team"])
+            # Normalize jornada → matchday for comparison
+            key = (p["jornada"], p["home_team"], p["away_team"])
+            # Compare against results table using jornada/matchday equivalence
             if key in result_map and p["prediction"] == result_map[key]:
                 hits[p["username"]] = hits.get(p["username"], 0) + 1
 
-        # Sort by hits descending
-        top_users = sorted([{"username": u, "hits": c} for u, c in hits.items()],
-                           key=lambda x: x["hits"], reverse=True)
+        # Sort users by number of hits
+        top_users = sorted(
+            [{"username": u, "hits": c} for u, c in hits.items()],
+            key=lambda x: x["hits"],
+            reverse=True
+        )
+
         return top_users
 
     except Exception as e:
@@ -314,39 +319,55 @@ def get_top_users():
         return []
 
 
+
+def get_last_matchday():
+    """Find the next jornada (matchday) after today, using Supabase filter."""
+    today = datetime.today().strftime("%Y-%m-%d")
+    try:
+        # Query directly in Supabase
+        res = (
+            supabase.table("matchdays")
+            .select("number, date")
+            .lte("date", today)             # <-- Compare date column < today
+            .order("date", desc=True)       # <-- Sort soonest first
+            .limit(1)                       # <-- Get only the last matchday
+            .execute()
+        )
+
+        data = res.data or []
+        if not data:
+            print("⚠️ No upcoming jornadas.")
+            return None
+
+        next_jornada = data[0]
+        return next_jornada
+
+    except Exception as e:
+        print(f"⚠️ Error in get_next_jornada: {e}")
+        return None
+
 # --- Corrected get_users_hits_last_matchday function ---
 def get_users_hits_last_matchday():
     """
     Return users and their hit ratio for the latest matchday.
     """
-    try:
-        # --- Get the last matchday ---
-        last_jornada_res = (
-            supabase.table("matchdays")
-            .select("number")
-            .order("date", desc=True) # <-- FIX: Changed 'ascending=False' to 'desc=True'
-            .limit(1)
-            .execute()
-        )
-        last_jornada_data = last_jornada_res.data or []
-        if not last_jornada_data:
-            return []
 
-        last_matchday = last_jornada_data[0]["number"]
+    try:
+        last_matchday = get_last_matchday()["number"]
 
         # --- Get predictions for the last matchday ---
         # IMPORTANT: Replace "matchday" with the actual column name in your predictions table
         # Based on error, it's NOT 'matchday'. Let's assume 'jornada_number' as an example.
         predictions = supabase.table("predictions").select(
-            "username, jornada_number, home_team, away_team, prediction" # <-- FIX: Replaced 'matchday'
-        ).eq("jornada_number", last_matchday).execute().data # <-- FIX: Replaced 'matchday'
+            "username, jornada, home_team, away_team, prediction" # <-- FIX: Replaced 'matchday'
+        ).eq("jornada", last_matchday).execute().data # <-- FIX: Replaced 'matchday'
 
         # --- Get results for the last matchday ---
         # IMPORTANT: Replace "matchday" with the actual column name in your results table
         # Based on error, it's NOT 'matchday'. Let's assume 'jornada_number' as an example.
         results = supabase.table("results").select(
-            "jornada_number, home_team, away_team, result" # <-- FIX: Replaced 'matchday'
-        ).eq("jornada_number", last_matchday).execute().data # <-- FIX: Replaced 'matchday'
+            "matchday, home_team, away_team, result" # <-- FIX: Replaced 'matchday'
+        ).eq("matchday", last_matchday).execute().data # <-- FIX: Replaced 'matchday'
 
         result_map = {
             (r["home_team"], r["away_team"]): r["result"] 

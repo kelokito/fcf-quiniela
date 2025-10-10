@@ -237,29 +237,12 @@ if st.button("💾 Save Predictions"):
 # --- Statistics ---
 st.subheader("📊 Statistics")
 
-df = get_all_predictions()
-
-if df.empty:
-    st.info("No predictions yet.")
-else:
-    # --- Number of users who answered ---
-    num_users = get_number_of_users()
-    total_users = len(get_existing_users())
-    st.metric(
-        label="Number of users who have answered",
-        value=f"{num_users} / {total_users}"
-    )
-    # --- Current classification ---
-    st.subheader("Current Classification")
-    # Example placeholder: replace with your real classification logic if available
-    if 'classification' in df.columns and 'team' in df.columns:
-        classification = df[['team','classification']].drop_duplicates().sort_values('classification', ascending=False)
-        st.table(classification)
-    else:
-        st.info("Classification data not available yet.")
 # --- Number of users who answered ---
 num_users = get_number_of_users(matchday['number']) # Use cached function
-st.metric("Number of users who have answered", num_users)
-
+total_users = len(get_existing_users())
+st.metric(
+    label="Number of users who have answered",
+    value=f"{num_users} / {total_users}"
+)
 # --- Current classification ---
 #st.subheader("Current Classification")
