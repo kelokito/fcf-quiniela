@@ -6,6 +6,8 @@ import pandas as pd
 import streamlit as st
 from supabase import create_client, Client
 from config import BASE_DIR, DATA_DIR, DATA_FILE
+from main import update_whole_data
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -400,3 +402,36 @@ def get_jackpot():
     """
     return 0
 
+def update_results():
+    """
+    Updates results data only if:
+    1. Today is Saturday or Sunday
+    2. Last update was more than 3 hours ago
+    """
+    now = datetime.utcnow()
+
+    # 1️⃣ Check if today is Saturday (5) or Sunday (6)
+    if now.weekday() not in [5, 6]:
+        return {"error": "⚠️ Data update is only available on weekends (Saturday & Sunday)."}
+
+    try:
+        # 2️⃣ Get last update from last_refresh table
+        last_update_res = supabase.table("last_refresh").select("moment").order("moment", ascending=False).limit(1).execute()
+        last_update_data = last_update_res.data or []
+
+        if last_update_data:
+            last_update = datetime.fromisoformat(last_update_data[0]["moment"])
+            if now - last_update < timedelta(hours=3):
+                return {"error": "⚠️ Data was updated less than 3 hours ago. Please wait."}
+
+        # 3️⃣ Perform the update
+        update_data()
+
+        # 4️⃣ Update last_refresh timestamp
+        supabase.table("last_refresh").insert({"moment": now.isoformat()}).execute()
+
+        return {"success": "✅ Data updated successfully!"}
+
+    except Exception as e:
+        return {"error": f"❌ Failed to update data: {e}"}
+    

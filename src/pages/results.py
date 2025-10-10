@@ -1,7 +1,16 @@
 # results.py
 import streamlit as st
-from logic import get_matchday, get_users_hits_last_matchday, get_matches, get_match_predictions
+from logic import get_last_matchday, get_users_hits_last_matchday, get_matches, get_match_predictions, update_results
 import pandas as pd
+
+
+with st.expander("🔄 Manual data refresh"):
+    if st.button("Update results now"):
+        res = update_results()
+        if "success" in res:
+            st.success(res["success"])
+        else:
+            st.warning(res.get("error", "⚠️ Unknown error occurred."))
 
 
 st.set_page_config(page_title="📊 Futsal Results", layout="centered")
@@ -10,7 +19,7 @@ st.set_page_config(page_title="📊 Futsal Results", layout="centered")
 st.title("📋 Jornada Results - Futsal Predictor")
 
 # --- Get current or last jornada ---
-matchday = get_matchday()
+matchday = get_last_matchday()
 if not matchday:
     st.warning("⚠️ No jornada data found.")
     st.stop()

@@ -226,6 +226,27 @@ def update_classification_table(data, supabase: Client):
     print(f"✅ Classification table updated with {len(classification_records)} teams.")
 
 
+def update_last_refresh(supabase):
+    """
+    Insert a new record into the 'last_refresh' table with the current timestamp.
+    """
+    try:
+        # Get the current UTC time in ISO format (you can use local time if you prefer)
+        now = datetime.utcnow().isoformat()
+
+        data = {"moment": now}
+
+        # Insert into Supabase
+        res = supabase.table("last_refresh").insert(data).execute()
+
+        if res.data:
+            print(f"✅ Last refresh updated at {now}")
+        else:
+            print("⚠️ Insert succeeded but returned no data.")
+
+    except Exception as e:
+        print(f"❌ Error in update_last_refresh: {e}")
+
 
 
 def update_data():
@@ -242,10 +263,15 @@ def update_data():
     SUPABASE_KEY = get_secret("SUPABASE_KEY")
     supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-    update_matchdays(data, supabase)
+    # It's already created so we do not need to update it
 
-    update_teams_table(data, supabase)
+    #update_matchdays(data, supabase)
+
+    #update_teams_table(data, supabase)
 
     update_results_table(data, supabase)
 
     update_classification_table(data, supabase)
+    
+
+    update_last_refresh(supabase)
