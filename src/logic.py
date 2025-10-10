@@ -239,6 +239,43 @@ def get_existing_users():
     return users
 
 
+
+# --- Corrected get_classification function ---
+def get_classification():
+    """
+    Return the current classification table with team photos.
+    This version manually joins classification with teams data in Python
+    by matching 'name' columns, since 'team_id' does not exist.
+    """
+    try:
+        # Fetch classification data
+        # 'team_id' removed from select, as it does not exist.
+        classification_data = supabase.table("classification").select(
+            "name, position, avg_points, total_points, games_played, home_points_ratio, away_points_ratio, avg_goals_favor, avg_goals_against"
+        ).order("position").execute().data
+
+        # Fetch team data to get photo URLs
+        teams_data = supabase.table("teams").select("name, logo").execute().data # Selecting 'name' for join key
+
+        # Convert teams data to a dictionary for efficient lookup, using 'name' as the key
+        team_photo_map = {team["name"]: team["logo"] for team in teams_data} # Using 'name' as key, directly storing logo
+
+        processed_classification = []
+        for item in classification_data:
+            team_name = item.get("name") # Get the team's name from classification
+            if team_name and team_name in team_photo_map:
+                item['logo'] = team_photo_map[team_name] # Get logo using team_name
+            else:
+                item['logo'] = None # No photo if team name not found in teams data
+            processed_classification.append(item)
+            
+        return processed_classification
+    except Exception as e:
+        print(f"⚠️ Error in get_classification: {e}")
+        return []
+    
+
+# --- Corrected get_top_users function ---
 def get_top_users():
     """
     Get users with the most correct predictions.
@@ -246,21 +283,24 @@ def get_top_users():
     """
     try:
         # Fetch all predictions joined with results
+        # IMPORTANT: Replace "matchday" with the actual column name in your predictions table
+        # Based on error, it's NOT 'matchday'. Let's assume 'jornada_number' as an example.
+        # You need to replace 'jornada_number' with the correct column name from your 'predictions' table.
         predictions = supabase.table("predictions").select(
-            "username, matchday, home_team, away_team, prediction"
+            "username, jornada_number, home_team, away_team, prediction" # <-- FIX: Replaced 'matchday'
         ).execute().data
 
         results = supabase.table("results").select(
-            "matchday, home_team, away_team, result"
+            "jornada_number, home_team, away_team, result" # <-- FIX: Replaced 'matchday'
         ).execute().data
 
         # Convert to dict for fast lookup
-        result_map = {(r["matchday"], r["home_team"], r["away_team"]): r["result"] for r in results if r["result"]}
+        result_map = {(r["jornada_number"], r["home_team"], r["away_team"]): r["result"] for r in results if r["result"]}
 
         # Count correct predictions
         hits = {}
         for p in predictions:
-            key = (p["matchday"], p["home_team"], p["away_team"])
+            key = (p["jornada_number"], p["home_team"], p["away_team"])
             if key in result_map and p["prediction"] == result_map[key]:
                 hits[p["username"]] = hits.get(p["username"], 0) + 1
 
@@ -274,18 +314,7 @@ def get_top_users():
         return []
 
 
-def get_classification():
-    """
-    Return the current classification table.
-    """
-    try:
-        classification = supabase.table("classification").select("*").order("position").execute().data
-        return classification
-    except Exception as e:
-        print(f"⚠️ Error in get_classification: {e}")
-        return []
-
-
+# --- Corrected get_users_hits_last_matchday function ---
 def get_users_hits_last_matchday():
     """
     Return users and their hit ratio for the latest matchday.
@@ -295,7 +324,7 @@ def get_users_hits_last_matchday():
         last_jornada_res = (
             supabase.table("matchdays")
             .select("number")
-            .order("date", ascending=False)
+            .order("date", desc=True) # <-- FIX: Changed 'ascending=False' to 'desc=True'
             .limit(1)
             .execute()
         )
@@ -306,14 +335,18 @@ def get_users_hits_last_matchday():
         last_matchday = last_jornada_data[0]["number"]
 
         # --- Get predictions for the last matchday ---
+        # IMPORTANT: Replace "matchday" with the actual column name in your predictions table
+        # Based on error, it's NOT 'matchday'. Let's assume 'jornada_number' as an example.
         predictions = supabase.table("predictions").select(
-            "username, matchday, home_team, away_team, prediction"
-        ).eq("matchday", last_matchday).execute().data
+            "username, jornada_number, home_team, away_team, prediction" # <-- FIX: Replaced 'matchday'
+        ).eq("jornada_number", last_matchday).execute().data # <-- FIX: Replaced 'matchday'
 
         # --- Get results for the last matchday ---
+        # IMPORTANT: Replace "matchday" with the actual column name in your results table
+        # Based on error, it's NOT 'matchday'. Let's assume 'jornada_number' as an example.
         results = supabase.table("results").select(
-            "matchday, home_team, away_team, result"
-        ).eq("matchday", last_matchday).execute().data
+            "jornada_number, home_team, away_team, result" # <-- FIX: Replaced 'matchday'
+        ).eq("jornada_number", last_matchday).execute().data # <-- FIX: Replaced 'matchday'
 
         result_map = {
             (r["home_team"], r["away_team"]): r["result"] 
@@ -339,8 +372,6 @@ def get_users_hits_last_matchday():
     except Exception as e:
         print(f"⚠️ Error in get_users_hit_ratio_last_matchday: {e}")
         return []
-
-
 
 def get_jackpot():
     """

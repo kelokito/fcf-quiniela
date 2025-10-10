@@ -93,6 +93,7 @@ def update_results_table(data, supabase):
 def update_classification_table(data, supabase: Client):
     """
     Compute and update the classification table in Supabase from the JSON data.
+    Now also includes 'avg_points'.
     
     Parameters:
         data (list): List of jornadas with match results.
@@ -142,10 +143,9 @@ def update_classification_table(data, supabase: Client):
     teams_stats = {
         team: {
             "name": team,
-            "home_points_ratio": 0,
-            "away_points_ratio": 0,
-            "avg_goals_favor": 0,
-            "avg_goals_against": 0,
+            "home_points": 0, # Renamed from home_points_ratio for clarity during accumulation
+            "away_points": 0, # Renamed from away_points_ratio for clarity during accumulation
+            "total_points": 0, # New: To accumulate total points
             "played_home": 0,
             "played_away": 0,
             "total_goals_favor": 0,
@@ -170,13 +170,15 @@ def update_classification_table(data, supabase: Client):
             home_points, away_points = 0, 3
 
         # Update home stats
-        teams_stats[home_team]["home_points_ratio"] += home_points
+        teams_stats[home_team]["home_points"] += home_points
+        teams_stats[home_team]["total_points"] += home_points # Accumulate total points
         teams_stats[home_team]["played_home"] += 1
         teams_stats[home_team]["total_goals_favor"] += home_goals
         teams_stats[home_team]["total_goals_against"] += away_goals
 
         # Update away stats
-        teams_stats[away_team]["away_points_ratio"] += away_points
+        teams_stats[away_team]["away_points"] += away_points
+        teams_stats[away_team]["total_points"] += away_points # Accumulate total points
         teams_stats[away_team]["played_away"] += 1
         teams_stats[away_team]["total_goals_favor"] += away_goals
         teams_stats[away_team]["total_goals_against"] += home_goals
@@ -186,19 +188,34 @@ def update_classification_table(data, supabase: Client):
     for stats in teams_stats.values():
         played_home = stats["played_home"]
         played_away = stats["played_away"]
-        played_total = played_home + played_away
+        played_total = played_home + played_away # Total games played by this team
+
+        # Calculate avg_points
+        total_points = stats["total_points"]
+        avg_points = round(total_points / played_total, 2) if played_total > 0 else 0
 
         record = {
             "name": stats["name"],
-            "home_points_ratio": round(stats["home_points_ratio"] / played_home, 2) if played_home > 0 else 0,
-            "away_points_ratio": round(stats["away_points_ratio"] / played_away, 2) if played_away > 0 else 0,
+            # These are now actual points accumulated, not ratios yet. Renamed for clarity in DB.
+            #"home_points_total": stats["home_points"], # New field for total home points
+            #"away_points_total": stats["away_points"], # New field for total away points
+            "home_points_ratio": round(stats["home_points"] / played_home, 2) if played_home > 0 else 0,
+            "away_points_ratio": round(stats["away_points"] / played_away, 2) if played_away > 0 else 0,
             "avg_goals_favor": round(stats["total_goals_favor"] / max(played_total, 1), 2),
-            "avg_goals_against": round(stats["total_goals_against"] / max(played_total, 1), 2)
+            "avg_goals_against": round(stats["total_goals_against"] / max(played_total, 1), 2),
+            "avg_points": avg_points, # New: Average points per game
+            "total_points": stats["home_points"]+stats["away_points"],
+            "games_played": stats["played_home"] + stats["played_away"]
         }
         classification_records.append(record)
 
     # --- Sort by total points descending ---
-    classification_records.sort(key=lambda x: (x["home_points_ratio"] + x["away_points_ratio"]), reverse=True)
+    # Now sorting by the newly calculated avg_points, or total_points if you prefer that for ranking
+    classification_records.sort(key=lambda x: (-x["avg_points"], x["games_played"]))
+    # Or, if you want to sort by total points:
+    # classification_records.sort(key=lambda x: (x["home_points_total"] + x["away_points_total"]), reverse=True)
+
+
     for i, record in enumerate(classification_records, 1):
         record["position"] = i
 
@@ -207,6 +224,8 @@ def update_classification_table(data, supabase: Client):
         supabase.table("classification").upsert(rec, on_conflict="name").execute()
 
     print(f"✅ Classification table updated with {len(classification_records)} teams.")
+
+
 
 
 def update_data():
