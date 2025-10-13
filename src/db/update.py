@@ -249,6 +249,146 @@ def update_last_refresh(supabase):
 
 
 
+
+def winner_in_matchday(matchday, supabase):
+    """
+    Return True if at least one user got all predictions correct for this matchday.
+    Also saves winner(s) in the 'winners' table.
+    """
+    try:
+        # --- Get predictions for this jornada ---
+        predictions = (
+            supabase.table("predictions")
+            .select("username, home_team, away_team, prediction")
+            .eq("jornada", matchday)
+            .execute()
+            .data or []
+        )
+
+        # --- Get actual results ---
+        results = (
+            supabase.table("results")
+            .select("home_team, away_team, result")
+            .eq("matchday", matchday)
+            .execute()
+            .data or []
+        )
+
+        if not predictions or not results:
+            return False  # not enough data
+
+        # --- Build result lookup map ---
+        result_map = {
+            (r["home_team"], r["away_team"]): r["result"]
+            for r in results
+            if r.get("result")
+        }
+
+        total_matches = len(result_map)
+        if total_matches == 0:
+            return False
+
+        # --- Group predictions by user ---
+        user_predictions = {}
+        for p in predictions:
+            user_predictions.setdefault(p["username"], []).append(p)
+
+        winners = []
+
+        # --- Check each user ---
+        for user, preds in user_predictions.items():
+            correct = 0
+            for p in preds:
+                key = (p["home_team"], p["away_team"])
+                if key in result_map and p["prediction"] == result_map[key]:
+                    correct += 1
+            if correct == total_matches:
+                print(f"✅ Winner found in jornada {matchday}: {user}")
+                winners.append(user)
+
+        # --- If there are winners, save them in DB ---
+        if winners:
+            for user in winners:
+                supabase.table("winners").upsert(
+                    {"username": user, "matchday": matchday}
+                ).execute()
+            return True
+
+        return False
+
+    except Exception as e:
+        print(f"⚠️ Error in winner_in_matchday({matchday}): {e}")
+        return False
+
+
+def update_jackpot(supabase):
+    """
+    Compute jackpot evolution across all matchdays up to today.
+    - Each jornada adds 16 units if no winner.
+    - Resets to 16 when someone wins.
+    """
+    try:
+        today = datetime.utcnow().strftime("%Y-%m-%d")
+
+        # --- Get all past matchdays ---
+        past_res = (
+            supabase.table("matchdays")
+            .select("number, date")
+            .lt("date", today)
+            .order("date", desc=False)
+            .execute()
+        )
+        past_matchdays = past_res.data or []
+
+        # --- Get the next (upcoming) matchday ---
+        next_res = (
+            supabase.table("matchdays")
+            .select("number, date")
+            .gte("date", today)
+            .order("date", desc=False)
+            .limit(1)
+            .execute()
+        )
+        next_matchday = next_res.data or []
+
+        # --- Combine both lists ---
+        matchdays = past_matchdays + next_matchday
+
+        if not matchdays:
+            print("⚠️ No past jornadas found.")
+            return
+
+        acc = 0
+        for i, jornada in enumerate(matchdays):
+            num = jornada["number"]
+
+            # For the first jornada, initialize
+            if i == 0:
+                acc = 0
+                supabase.table("jackpot").upsert(
+                    {"matchday": num, "accumulated": acc}
+                ).execute()
+                continue
+
+            # For subsequent jornadas
+            has_winner = winner_in_matchday(num, supabase)
+            if has_winner:
+                acc = 16
+            else:
+                acc += 16
+
+            # Insert or update jackpot for this jornada
+            supabase.table("jackpot").upsert(
+                {"matchday": num, "accumulated": acc}
+            ).execute()
+
+        print("✅ Jackpot table updated successfully.")
+
+    except Exception as e:
+        print(f"⚠️ Error in update_jackpot: {e}")
+
+
+
 def update_data():
     """Create tables and insert/update teams, results, and classification from JSON."""
     if not DATA_FILE.exists():
@@ -272,6 +412,7 @@ def update_data():
     update_results_table(data, supabase)
 
     update_classification_table(data, supabase)
-    
 
+    update_jackpot(supabase)
+    
     update_last_refresh(supabase)

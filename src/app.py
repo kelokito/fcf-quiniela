@@ -1,5 +1,5 @@
 import streamlit as st
-from logic import get_prediction_distribution, get_number_of_users, get_matchday, save_predictions_db, get_matches, get_existing_users, get_match_predictions
+from logic import get_prediction_distribution, get_number_of_users, get_next_matchday, save_predictions_db, get_matches, get_existing_users, get_match_predictions, get_jackpot_for_matchday
 import pandas as pd
 
 st.set_page_config(page_title="Futsal Predictor", layout="centered")
@@ -10,7 +10,7 @@ st.set_page_config(page_title="Futsal Predictor", layout="centered")
 
 @st.cache_data(ttl=3600) # Cache for 1 hour (matchday might change more often)
 def cached_get_matchday():
-    return get_matchday()
+    return get_next_matchday()
 
 @st.cache_data(ttl=3600) # Cache for 1 hour
 def cached_get_matches(jornada_number):
@@ -244,5 +244,9 @@ st.metric(
     label="Number of users who have answered",
     value=f"{num_users} / {total_users}"
 )
-# --- Current classification ---
-#st.subheader("Current Classification")
+
+# ---------------- JACKPOT ----------------
+st.subheader("💰 Current Jackpot")
+
+jackpot_value = get_jackpot_for_matchday(matchday["number"])
+st.metric(label=f"Total Jackpot for Jornada {matchday['number']}", value=f"{jackpot_value} €")

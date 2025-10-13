@@ -1,6 +1,6 @@
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 import pandas as pd
 import streamlit as st
@@ -174,7 +174,7 @@ def get_number_of_users(matchday_number):
         return 0
 
 
-def get_matchday():
+def get_next_matchday():
     """Find the next jornada (matchday) after today, using Supabase filter."""
     today = datetime.today().strftime("%Y-%m-%d")
     try:
@@ -205,12 +205,11 @@ def get_matches(matchday: str):
     Return all matches for a given matchday where result is NULL.
     Includes home_team, away_team, and their logos via join with 'teams' table.
     """
-    print(matchday)
     try:
         home_teams = {t["name"]: t["logo"] for t in supabase.table("teams").select("name,logo").execute().data}
         away_teams = home_teams  # same table
 
-        matches = supabase.table("results").select("*").eq("matchday", matchday).is_("result", None).execute().data
+        matches = supabase.table("results").select("*").eq("matchday", matchday).execute().data
 
         formatted = []
         for m in matches:
@@ -396,12 +395,6 @@ def get_users_hits_last_matchday():
         print(f"⚠️ Error in get_users_hit_ratio_last_matchday: {e}")
         return []
 
-def get_jackpot():
-    """
-    Return the current bote (jackpot), currently mocked as 0.
-    """
-    return 0
-
 def update_results():
     """
     Updates results data only if:
@@ -411,21 +404,21 @@ def update_results():
     now = datetime.utcnow()
 
     # 1️⃣ Check if today is Saturday (5) or Sunday (6)
-    if now.weekday() not in [5, 6]:
-        return {"error": "⚠️ Data update is only available on weekends (Saturday & Sunday)."}
+    if now.weekday() not in [5, 6, 0]:
+        return {"error": "⚠️ Data update is only available on weekends and on Monday."}
 
     try:
         # 2️⃣ Get last update from last_refresh table
-        last_update_res = supabase.table("last_refresh").select("moment").order("moment", ascending=False).limit(1).execute()
+        last_update_res = supabase.table("last_refresh").select("moment").order("moment", desc=True).limit(1).execute()
         last_update_data = last_update_res.data or []
-
+        
         if last_update_data:
             last_update = datetime.fromisoformat(last_update_data[0]["moment"])
             if now - last_update < timedelta(hours=3):
                 return {"error": "⚠️ Data was updated less than 3 hours ago. Please wait."}
-
+        
         # 3️⃣ Perform the update
-        update_data()
+        update_whole_data()
 
         # 4️⃣ Update last_refresh timestamp
         supabase.table("last_refresh").insert({"moment": now.isoformat()}).execute()
@@ -435,3 +428,47 @@ def update_results():
     except Exception as e:
         return {"error": f"❌ Failed to update data: {e}"}
     
+def get_jackpot_for_matchday(matchday):
+    """
+    Returns the jackpot value for a given matchday.
+    If not found, returns 0.
+    """
+    try:
+        data = (
+            supabase.table("jackpot")
+            .select("accumulated")
+            .eq("matchday", matchday)
+            .execute()
+            .data
+        )
+
+        if data and len(data) > 0:
+            return data[0].get("accumulated", 0)
+        else:
+            return 0
+
+    except Exception as e:
+        print(f"⚠️ Error in get_jackpot_for_matchday({matchday}): {e}")
+        return 0
+
+
+def get_historic_winners(matchday=None):
+    """
+    Returns all winners from the 'winners' table.
+    If matchday is provided, filters to that jornada only.
+    """
+    try:
+        query = supabase.table("winners").select("username, matchday")
+        if matchday is not None:
+            query = query.eq("matchday", matchday)
+
+        data = query.order("matchday", desc=False).execute().data or []
+
+        # Sort nicely by matchday ascending, then username
+        data.sort(key=lambda x: (x["matchday"], x["username"]))
+
+        return data
+
+    except Exception as e:
+        print(f"⚠️ Error in get_historic_winners({matchday}): {e}")
+        return []

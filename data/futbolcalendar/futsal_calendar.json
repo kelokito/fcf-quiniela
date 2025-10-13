@@ -75,38 +75,38 @@
             {
                 "home_team": "ATLÈTIC LES CORTS FUTSAL   C",
                 "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001019194_ESCUDO_ALC.png",
-                "home_score": null,
+                "home_score": "0",
                 "away_team": "JESUÏTES EL CLOT CLUB ESPORTIU B",
                 "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001127609_Logo_Club_Clot__11_.png",
-                "away_score": null,
-                "match_report": null
+                "away_score": "0",
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/atletic-les-corts-futsal-c/as3/jesuites-el-clot-club-esportiu-b"
             },
             {
                 "home_team": "INFANT JESÚS CLUB ESPORTIU A",
                 "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
-                "home_score": null,
+                "home_score": "4",
                 "away_team": "ICARS ATLETIC  A",
                 "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/",
-                "away_score": null,
-                "match_report": null
+                "away_score": "1",
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/infant-jesus-club-esportiu-a/as3/icars-atletic-a"
             },
             {
                 "home_team": "NOU DE LA RAMBLA CFS A",
                 "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000155571_LOGO_2011.png",
-                "home_score": null,
+                "home_score": "7",
                 "away_team": "AELIS-SAGE PARTNER EIXAMPLE C",
                 "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000756515_cfseixample_200x200.png",
-                "away_score": null,
-                "match_report": null
+                "away_score": "2",
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/nou-de-la-rambla-cfs-a/as3/aelis-sage-partner-eixample-c"
             },
             {
                 "home_team": "AEE INSTITUT ICÀRIA CET10 B",
                 "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000096073_1_1402483146_LOGO-CET10.png",
-                "home_score": null,
+                "home_score": "2",
                 "away_team": "IPSE EL PILAR CE B",
                 "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000119218_IPSE_ok1.png",
-                "away_score": null,
-                "match_report": null
+                "away_score": "2",
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/aee-institut-icaria-cet10-b/as3/ipse-el-pilar-ce-b"
             },
             {
                 "home_team": "POBLE SEC UNIÓ ESPORTIVA A",
@@ -115,25 +115,25 @@
                 "away_team": "FUTSAL POLARIS FORT PIENC C",
                 "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000653772_polaris_200x200.png",
                 "away_score": null,
-                "match_report": null
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/poble-sec-unio-esportiva-a/as3/futsal-polaris-fort-pienc-c"
             },
             {
                 "home_team": "JESUÏTES GRÀCIA-COL.LEGI KOSTKA CE A",
                 "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0001001265_ESCUT_KOSTKA.jpg",
-                "home_score": null,
+                "home_score": "5",
                 "away_team": "FUTSAL ROSARIO CENTRAL D",
                 "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000651422_rosariocentral_200x200.png",
-                "away_score": null,
-                "match_report": null
+                "away_score": "3",
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/jesuites-gracia-collegi-kostka-ce-a/as3/futsal-rosario-central-d"
             },
             {
                 "home_team": "POBLENOU FUTBOL CLUB A",
                 "home_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000967749_00100_0000958991_Escudo_4_tintas__1_.png",
-                "home_score": null,
+                "home_score": "2",
                 "away_team": "PADRE DAMIAN SSCC B",
                 "away_logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000899671_padredamian_200.png",
-                "away_score": null,
-                "match_report": null
+                "away_score": "2",
+                "match_report": "https://www.fcf.cat/acta/2526/futbol-sala/lliga-tercera-divisio-catalana-futbol-sala/bcn-gr11/as3/poblenou-futbol-club-a/as3/padre-damian-sscc-b"
             }
         ]
     },

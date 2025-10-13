@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from logic import get_top_users, get_classification, get_users_hits_last_matchday, get_jackpot
+from logic import get_top_users, get_classification, get_users_hits_last_matchday, get_historic_winners
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(page_title="📊 Statistics", layout="wide")
@@ -74,11 +74,15 @@ if ratios:
 else:
     st.info("No hit ratio data available yet for the last matchday.")
 
-# ---------------- JACKPOT ----------------
-st.subheader("💰 Current Jackpot")
+# ---------------- Get ALL HISTORIC WINNERS ----------------
+st.subheader("🏆 Historic Winners")
+winners = get_historic_winners()
+if not winners:
+    st.info("😔 No winners found yet.")
+else:
+    for w in winners:
+        st.markdown(f"- 🥇 **{w['username']}** won Jornada **{w['matchday']}**")
 
-jackpot_value = get_jackpot()
-st.metric(label="Total Jackpot", value=f"{jackpot_value} €")
 
 # ---------------- FOOTER ----------------
 st.markdown("---")

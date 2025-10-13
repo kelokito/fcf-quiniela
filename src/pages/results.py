@@ -1,6 +1,6 @@
 # results.py
 import streamlit as st
-from logic import get_last_matchday, get_users_hits_last_matchday, get_matches, get_match_predictions, update_results
+from logic import get_last_matchday, get_users_hits_last_matchday, get_matches, get_match_predictions, update_results, get_jackpot_for_matchday
 import pandas as pd
 
 
@@ -66,6 +66,27 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# ---------------- JACKPOT ----------------
+st.subheader("💰 Current Jackpot")
+
+jackpot_value = get_jackpot_for_matchday(matchday["number"])
+st.metric(label=f"Total Jackpot for Jornada {matchday['number']}", value=f"{jackpot_value} €")
+
+
+# ---------------- LAST MATCHDAY PERFORMANCE ----------------
+st.subheader("🎯 Matchday Hit Ratios")
+
+ratios = get_users_hits_last_matchday()
+if ratios:
+    df_ratios = pd.DataFrame(ratios)
+    df_ratios = df_ratios.rename(columns={"username": "User", "hit_ratio": "Hit Ratio"})
+    df_ratios["Hit Ratio (%)"] = df_ratios["Hit Ratio"] * 100
+
+    st.bar_chart(df_ratios.set_index("User")["Hit Ratio (%)"])
+else:
+    st.info("No hit ratio data available yet for the last matchday.")
+
+
 # --- Display each match with results and predictions ---
 for match in matches:
     home_team = match["home_team"]
@@ -118,17 +139,3 @@ for match in matches:
     st.markdown("</div>", unsafe_allow_html=True)  # close match-card
 
 st.success("✅ Results and predictions loaded successfully!")
-
-
-# ---------------- LAST MATCHDAY PERFORMANCE ----------------
-st.subheader("🎯 Matchday Hit Ratios")
-
-ratios = get_users_hits_last_matchday()
-if ratios:
-    df_ratios = pd.DataFrame(ratios)
-    df_ratios = df_ratios.rename(columns={"username": "User", "hit_ratio": "Hit Ratio"})
-    df_ratios["Hit Ratio (%)"] = df_ratios["Hit Ratio"] * 100
-
-    st.bar_chart(df_ratios.set_index("User")["Hit Ratio (%)"])
-else:
-    st.info("No hit ratio data available yet for the last matchday.")
